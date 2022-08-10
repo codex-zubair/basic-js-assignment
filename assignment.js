@@ -1,11 +1,5 @@
-// TODO add let and const 
-// TODO Remove All TODO 
-// TODO ADD COMMENTS
-// TODO Remove all unneeded console. 
-// TODO Fixed undefined error message.
-
-
-// * Problem ONE START
+// Convert Radian to degree Start...
+// !Problem:- 1
 function radianToDegree(radian) {
     if (typeof radian == "number") {
 
@@ -20,11 +14,11 @@ function radianToDegree(radian) {
     else {
         console.log("Please provide valid input!")
     }
-
 }
 
-// radianToDegree(5);
-// * Problem ONE END
+// radianToDegree(78);
+//! Problem:- 1
+// Convert Radian to degree End...
 
 
 
@@ -34,8 +28,8 @@ function radianToDegree(radian) {
 
 
 
-
-// * Problem Two Start
+// Checking wether the given file name is a javascript or not Start... 
+// ! Problem:- 2
 function isJavaScriptFile(fileName) {
 
     if (typeof fileName == "string") {
@@ -55,7 +49,8 @@ function isJavaScriptFile(fileName) {
 }
 
 // isJavaScriptFile(4);
-// * Problem Two End
+// ! Problem:- 2
+// Checking wether the given file name is a javascript or not End... 
 
 
 
@@ -67,99 +62,132 @@ function isJavaScriptFile(fileName) {
 
 
 
-
-
-// *Problem Three  Start
+//  Calculate the total oil price that have to pay (Start)
+// !Problem:- 3
 function oilPrice(diesel, petrol, octane) {
 
-    let dieselPrice = 114 * diesel;
-    let petrolPrice = 130 * petrol;
-    let octanePrice = 135 * octane;
+    if (typeof diesel == "number" && typeof petrol == "number" && typeof octane == "number") {
+        let dieselPrice = 114 * diesel;
+        let petrolPrice = 130 * petrol;
+        let octanePrice = 135 * octane;
 
-    // Total billing
-    const totalBill = dieselPrice + petrolPrice + octanePrice;
-
-    return totalBill;
-}
-
-console.log(oilPrice(0, 0, 2));
-// *Problem Three  Start
-
-
-
-
-
-
-
-
-
-
-
-// TODO Send Error For Zero People and type check....
-// *Problem Four Start
-function publicBusFare(passenger) {
-
-
-    // * Checking people for bus
-    if (passenger % 50 != 0) {
-
-        let extraPassengerOfBus = passenger % 50;
-        console.log(extraPassengerOfBus);
-
-        // * Checking People for micro bus
-        if (extraPassengerOfBus % 11 != 0) {
-
-            let extraPassengerOfMicro = extraPassengerOfBus % 11;
-
-            console.log(extraPassengerOfMicro);
-
-
-
-            // * Checking Extra passenger are exist for public bus.
-            if (extraPassengerOfMicro != 0) {
-
-
-
-                // * Calculating The Bus Fair For Extra People...
-                const busFair = extraPassengerOfMicro * 250;
-
-                return busFair;
-            }
-        }
-
+        // Total billing
+        const totalBill = dieselPrice + petrolPrice + octanePrice;
+        return totalBill;
     }
+    else
+        (
+            console.log("Please Provide Number!")
+        )
 }
 
-// console.log(publicBusFare(8))
-
-// *Problem Four End
-
-
+// oilPrice(0, 3, 2);
+// !Problem:- 3
+// Calculate the total oil price that have to pay (End)
 
 
-//*problem five Start
-function isBestFriend(obj1, obj2) {
-    if (obj1.foo == obj2.bar) {
-        return true;
+
+
+
+
+
+
+
+
+
+// Bus Fair for N passenger...
+// !Problem:- 4
+function publicBusFare(passenger) {
+    let busFair = 0;
+
+    if (typeof passenger == 'number') {
+        // * Checking people for bus
+        if (passenger % 50 != 0) {
+
+            let extraPassengerOfBus = passenger % 50;
+
+
+            // * Checking People for micro bus
+            if (extraPassengerOfBus % 11 != 0) {
+
+                let extraPassengerOfMicro = extraPassengerOfBus % 11;
+
+
+
+                // * Checking Extra passenger are exist for public bus.
+                if (extraPassengerOfMicro != 0) {
+
+
+
+                    // * Calculating The Bus Fair For Extra People...
+                    let busFair = extraPassengerOfMicro * 250;
+                    // TODO NOT GETTING RETURN VALUE FROM IT... FIXED.
+
+                    return busFair;
+
+                }
+            }
+
+        }
     }
 
     else {
-        return false;
+        console.log("Please provide Number!")
+    }
+}
+
+// publicBusFare(6);
+// !Problem:- 4
+// Bus Fair for N passenger...
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Checking Two Best Friends...
+//!Problem:- 5
+function isBestFriend(obj1, obj2) {
+
+    // *Checking of type.
+    if (typeof obj1 == 'object' && typeof obj2 == 'object') {
+
+        if (obj1.foo == obj2.bar) {
+            return true;
+        }
+
+        else {
+            return false;
+        }
+    }
+
+
+
+    else {
+        console.log("Please provide correct input!")
     }
 }
 
 
-let someObject1 = {
-    foo: "Tom",
-    bar: "Rock"
+const object1 = {
+    name: "Tom",
+    bestFriend: "Rock"
 };
 
-let someObject2 = {
-    foo: "Rock",
-    bar: "Tm"
+const object2 = {
+    name: "Rock",
+    bestFriend: "Tom"
 };
 
 
-// console.log(isBestFriend(someObject1, someObject2));
+// isBestFriend(object1, object2);
 
-//*problem five End
+//! problem:- 5
+// Checking Two Best Friends...
