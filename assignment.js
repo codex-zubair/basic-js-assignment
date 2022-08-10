@@ -28,5 +28,24 @@ function isJavaScriptFile(fileName) {
     }
 }
 
-console.log(isJavaScriptFile("abul.js"));
+// console.log(isJavaScriptFile("abul.js"));
 // * Problem Two End
+
+
+
+
+// *Problem Three  Start
+function oilPrice(diesel, petrol, octen) {
+
+    dieselPrice = 114 * diesel;
+    petrolPrice = 130 * petrol;
+    octenPrice = 135 * octen;
+
+    // Total billing
+    totalBill = dieselPrice + petrolPrice + octenPrice;
+
+    return totalBill;
+}
+
+// console.log(oilPrice(2, 1, 2));
+// *Problem Three  Start
