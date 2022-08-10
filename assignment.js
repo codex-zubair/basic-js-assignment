@@ -1,22 +1,36 @@
 // TODO add let and const 
 // TODO Remove All TODO 
 // TODO ADD COMMENTS
+// TODO Remove all unneeded console. 
+// TODO Fixed undefined error message.
 
 
 // * Problem ONE START
-
-// TODO Check if you need after dot values..
 function radianToDegree(radian) {
-    degree = radian * 180 / Math.PI;
+    if (typeof radian == "number") {
 
-    return degree;
+        // Formula radian to Number.
+        let subDegree = radian * 180 / Math.PI;
+
+        // Converting Two Decimals
+        const degree = subDegree.toFixed(2);
+        return degree;
+    }
+
+    else {
+        console.log("Please provide valid input!")
+    }
 
 }
 
-
-// console.log(radianToDegree(1));
-
+// radianToDegree(5);
 // * Problem ONE END
+
+
+
+
+
+
 
 
 
@@ -24,17 +38,33 @@ function radianToDegree(radian) {
 // * Problem Two Start
 function isJavaScriptFile(fileName) {
 
-    if (fileName.includes('.js')) {
-        return true;
+    if (typeof fileName == "string") {
+        if (fileName.includes('.js')) {
+            return true;
+        }
+
+        else {
+            return false;
+        }
     }
 
     else {
-        return false;
+        console.log("Please provide correct input!")
+
     }
 }
 
-// console.log(isJavaScriptFile("abul.js"));
+// isJavaScriptFile(4);
 // * Problem Two End
+
+
+
+
+
+
+
+
+
 
 
 
@@ -44,32 +74,40 @@ function oilPrice(diesel, petrol, octane) {
 
     let dieselPrice = 114 * diesel;
     let petrolPrice = 130 * petrol;
-    let octenPrice = 135 * octane;
+    let octanePrice = 135 * octane;
 
     // Total billing
-    const totalBill = dieselPrice + petrolPrice + octenPrice;
+    const totalBill = dieselPrice + petrolPrice + octanePrice;
 
     return totalBill;
 }
 
-// console.log(oilPrice(2, 1, 2));
+console.log(oilPrice(0, 0, 2));
 // *Problem Three  Start
 
 
 
-// TODO Check the Video Of this Section and Full fill the requirement
+
+
+
+
+
+
+
+
+// TODO Send Error For Zero People and type check....
 // *Problem Four Start
 function publicBusFare(passenger) {
 
 
-    // * Sending passenger to bus
+    // * Checking people for bus
     if (passenger % 50 != 0) {
 
         let extraPassengerOfBus = passenger % 50;
         console.log(extraPassengerOfBus);
 
-        // * Sending passenger to microbus
-        if (extraPassengerOfBus > 11) {
+        // * Checking People for micro bus
+        if (extraPassengerOfBus % 11 != 0) {
 
             let extraPassengerOfMicro = extraPassengerOfBus % 11;
 
@@ -77,24 +115,22 @@ function publicBusFare(passenger) {
 
 
 
-            // * Checking Extra passenger are exist from Micro bus or not
+            // * Checking Extra passenger are exist for public bus.
             if (extraPassengerOfMicro != 0) {
+
+
 
                 // * Calculating The Bus Fair For Extra People...
                 const busFair = extraPassengerOfMicro * 250;
 
                 return busFair;
             }
-
-
         }
 
     }
-
-
 }
 
-// console.log(publicBusFare(58))
+// console.log(publicBusFare(8))
 
 // *Problem Four End
 
@@ -124,6 +160,6 @@ let someObject2 = {
 };
 
 
-console.log(isBestFriend(someObject1, someObject2));
+// console.log(isBestFriend(someObject1, someObject2));
 
 //*problem five End
