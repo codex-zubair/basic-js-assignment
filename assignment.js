@@ -12,11 +12,11 @@ function radianToDegree(radian) {
     }
 
     else {
-        console.log("Please provide valid input!")
+        return "Please provide valid input!";
     }
 }
 
-// radianToDegree(10);
+// radianToDegree(2);
 //! Problem:- 1
 // Convert Radian to degree End...
 
@@ -43,7 +43,7 @@ function isJavaScriptFile(fileName) {
     }
 
     else {
-        console.log("Please provide correct input!")
+        return "Please provide correct input!";
 
     }
 }
@@ -75,10 +75,11 @@ function oilPrice(diesel, petrol, octane) {
         const totalBill = dieselPrice + petrolPrice + octanePrice;
         return totalBill;
     }
-    else
-        (
-            console.log("Please Provide Number!")
-        )
+    else {
+
+        return "Please Provide Number!";
+    }
+
 }
 
 // console.log(oilPrice(1, 0, 2));
@@ -141,7 +142,7 @@ function publicBusFare(passenger) {
     }
 
     else {
-        console.log("Please provide Number!")
+        return "Please provide Number!";
     }
 }
 
@@ -180,7 +181,7 @@ function isBestFriend(obj1, obj2) {
 
 
     else {
-        console.log("Please provide correct input!")
+        return "Please provide correct input!";
     }
 }
 
