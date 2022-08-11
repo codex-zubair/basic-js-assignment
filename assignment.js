@@ -16,7 +16,7 @@ function radianToDegree(radian) {
     }
 }
 
-// radianToDegree(78);
+// radianToDegree(10);
 //! Problem:- 1
 // Convert Radian to degree End...
 
@@ -33,7 +33,7 @@ function radianToDegree(radian) {
 function isJavaScriptFile(fileName) {
 
     if (typeof fileName == "string") {
-        if (fileName.includes('.js')) {
+        if (fileName.includes('.js') && fileName.endsWith('.js')) {
             return true;
         }
 
@@ -48,7 +48,7 @@ function isJavaScriptFile(fileName) {
     }
 }
 
-// isJavaScriptFile(4);
+console.log(isJavaScriptFile('iamge.jpg.js'));
 // ! Problem:- 2
 // Checking wether the given file name is a javascript or not End... 
 
