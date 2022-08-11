@@ -48,7 +48,7 @@ function isJavaScriptFile(fileName) {
     }
 }
 
-// isJavaScriptFile('iamge.jpg.js');
+// isJavaScriptFile('image.jpg.js');
 // ! Problem:- 2
 // Checking wether the given file name is a javascript or not End... 
 
@@ -82,7 +82,7 @@ function oilPrice(diesel, petrol, octane) {
 
 }
 
-// console.log(oilPrice(1, 0, 2));
+// oilPrice(1, 0, 2);
 // !Problem:- 3
 // Calculate the total oil price that have to pay (End)
 
@@ -146,9 +146,12 @@ function publicBusFare(passenger) {
     }
 }
 
-// publicBusFare(365);
+// publicBusFare(0);
 // !Problem:- 4
 // Bus Fair for N passenger...
+
+
+
 
 
 
@@ -167,7 +170,7 @@ function publicBusFare(passenger) {
 function isBestFriend(obj1, obj2) {
 
     // *Checking of type.
-    if (typeof obj1 == 'object' && typeof obj2 == 'object') {
+    if (typeof obj1 == 'object' && typeof obj2 == 'object' && Array.isArray(obj1) != true && Array.isArray(obj2) != true) {
 
         if (obj1.name == obj2.bestFriend) {
             return true;
@@ -197,7 +200,7 @@ const object2 = {
 };
 
 
-// isBestFriend(object1, object2);
+// (isBestFriend([4354], [454]));
 
 //! problem:- 5
 // Checking Two Best Friends...
