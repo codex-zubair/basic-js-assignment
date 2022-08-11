@@ -168,7 +168,7 @@ function isBestFriend(obj1, obj2) {
     // *Checking of type.
     if (typeof obj1 == 'object' && typeof obj2 == 'object') {
 
-        if (obj1.foo == obj2.bar) {
+        if (obj1.name == obj2.bestFriend) {
             return true;
         }
 
@@ -186,13 +186,13 @@ function isBestFriend(obj1, obj2) {
 
 
 const object1 = {
-    name: "Tom",
-    bestFriend: "Rock"
+    name: "rock",
+    bestFriend: "tom"
 };
 
 const object2 = {
-    name: "Rock",
-    bestFriend: "Tom"
+    name: "tom",
+    bestFriend: "rock"
 };
 
 
