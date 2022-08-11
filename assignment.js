@@ -48,7 +48,7 @@ function isJavaScriptFile(fileName) {
     }
 }
 
-console.log(isJavaScriptFile('iamge.jpg.js'));
+// isJavaScriptFile('iamge.jpg.js');
 // ! Problem:- 2
 // Checking wether the given file name is a javascript or not End... 
 
@@ -81,7 +81,7 @@ function oilPrice(diesel, petrol, octane) {
         )
 }
 
-// oilPrice(0, 3, 2);
+// console.log(oilPrice(1, 0, 2));
 // !Problem:- 3
 // Calculate the total oil price that have to pay (End)
 
@@ -129,6 +129,15 @@ function publicBusFare(passenger) {
             }
 
         }
+
+        // IF passengers are 50...
+        else {
+            return 0;
+        }
+
+
+
+
     }
 
     else {
@@ -136,7 +145,7 @@ function publicBusFare(passenger) {
     }
 }
 
-// publicBusFare(6);
+// publicBusFare(365);
 // !Problem:- 4
 // Bus Fair for N passenger...
 
